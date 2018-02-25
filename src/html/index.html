@@ -7,6 +7,31 @@
   </head>
   <body>
     <h1>Hello World</h1>
+    <div class="loader">
+      <div class="loader-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
+              <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+            </filter>
+            <filter id="neon">
+            </filter>
+          </defs>
+          <g class="loader-disc">
+            <circle cx="100" cy="37.36" r="27.37"/>
+            <circle cx="39.67" cy="97.69" r="27.37"/>
+            <circle cx="100" cy="158.03" r="27.37"/>
+            <circle cx="160.33" cy="97.69" r="27.37"/>
+          </g>
+          <g id="disc">
+            <circle class="loader-disc loader-disc--small" cx="100" cy="37.36" r="14.36" transform="translate(2.87 81.65) rotate(-45)"/>
+            <rect fill="none" width="200" height="200"/>
+          </g>
+        </svg>
+      </div>
+    </div>
     <!-- @include _includes/common/js.html -->
   </body>
 </html>

@@ -3,3 +3,32 @@
 @import "mixins/mixins";
 @import "base/base";
 @import "components/components";
+
+$loader-size: 400px;
+$color: #1ecd32;
+
+body, html
+{
+  background: #111;
+}
+
+.loader
+{
+  display: flex;
+    justify-content: center;
+  filter: url("#goo");
+  transform: translateZ(0);
+}
+.loader-container
+{
+  height: $loader-size;
+  width: $loader-size;
+}
+.loader-disc
+{
+  fill: $color;
+}
+.loader-disc--small
+{
+  //filter: url("#neon");
+}
