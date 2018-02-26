@@ -16,6 +16,9 @@
               <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
               <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
             </filter>
+            <filter id="neon">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
+            </filter>
             <radialGradient id="gradient">
               <stop offset="1%" stop-color="#99FFA6"/>
               <stop offset="80%" stop-color="#1ECD32"/>
