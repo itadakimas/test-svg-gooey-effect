@@ -5,7 +5,7 @@ import { TweenMax, Linear } from "gsap";
 
 function animateLoader()
 {
-  TweenMax.to(document.querySelector("#disc"), 5, {
+  TweenMax.to(document.querySelectorAll(".loader-clock"), 5, {
     ease: Linear.easeNone,
     repeat: -1,
     rotation: "-=360",

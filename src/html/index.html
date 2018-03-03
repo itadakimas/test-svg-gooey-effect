@@ -16,23 +16,27 @@
               <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
               <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
             </filter>
-            <filter id="neon">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
-            </filter>
             <radialGradient id="gradient">
-              <stop offset="1%" stop-color="#99FFA6"/>
+              <stop offset="0%" stop-color="#45E655"/>
+              <stop offset="20%" stop-color="#45E655"/>
               <stop offset="80%" stop-color="#1ECD32"/>
             </radialGradient>
           </defs>
-          <g class="loader-disc">
-            <circle cx="100" cy="37.36" r="27.37"/>
-            <circle cx="39.67" cy="97.69" r="27.37"/>
-            <circle cx="100" cy="158.03" r="27.37"/>
-            <circle cx="160.33" cy="97.69" r="27.37"/>
-          </g>
-          <g id="disc">
-            <circle class="loader-disc loader-disc--small" cx="100" cy="37.36" r="14.36" transform="translate(2.87 81.65) rotate(-45)"/>
+          <g class="loader-clock">
+            <circle class="loader-disc loader-disc--blur" cx="100" cy="37.36" r="14.36" transform="translate(2.87 81.65) rotate(-45)"/>
             <rect fill="none" width="200" height="200"/>
+          </g>
+          <g class="loader-gooey">
+            <g class="loader-disc">
+              <circle cx="100" cy="37.36" r="27.37"/>
+              <circle cx="39.67" cy="97.69" r="27.37"/>
+              <circle cx="100" cy="158.03" r="27.37"/>
+              <circle cx="160.33" cy="97.69" r="27.37"/>
+            </g>
+            <g class="loader-clock">
+              <circle class="loader-disc loader-disc--small" cx="100" cy="37.36" r="14.36" transform="translate(2.87 81.65) rotate(-45)"/>
+              <rect fill="none" width="200" height="200"/>
+            </g>
           </g>
         </svg>
       </div>

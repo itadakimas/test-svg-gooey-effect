@@ -5,24 +5,40 @@
 @import "components/components";
 
 $loader-size: 400px;
-$color: #1ecd32;
+$color: #1ECD32;
+$color-lighten: #45E655;
+
+@keyframes rotate {
+
+  from
+  {
+    transform: translateZ(0) rotate(0deg);
+  }
+  to
+  {
+    transform: translateZ(0) rotate(-360deg);
+  }
+}
 
 body, html
 {
-  background: #111;
+  background: #000;
 }
 
 .loader
 {
   display: flex;
     justify-content: center;
-  filter: url("#goo");
-  transform: translateZ(0);
 }
 .loader-container
 {
   height: $loader-size;
   width: $loader-size;
+  animation: rotate 6s linear infinite;
+}
+.loader-gooey
+{
+  filter: url("#goo");
 }
 .loader-disc
 {
@@ -30,6 +46,9 @@ body, html
 }
 .loader-disc--small
 {
-  fill: url(#gradient);
-  filter: url(#neon);
+  fill: url("#gradient");
+}
+.loader-disc--blur
+{
+  filter: drop-shadow(0 0 10px $color-lighten);
 }
